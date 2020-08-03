@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0AE88350-8237-4F17-BCC7-3DBA78A37CDE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>PacMan.My.MyApplication</StartupObject>
+    <RootNamespace>PacMan</RootNamespace>
+    <AssemblyName>PacMan</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PacMan.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PacMan.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>385px-pac_mansvg-342x400.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmInstructions.Designer.vb">
+      <DependentUpon>frmInstructions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInstructions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLose.Designer.vb">
+      <DependentUpon>frmLose.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPacMan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPacMan.Designer.vb">
+      <DependentUpon>frmPacMan.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIntro.Designer.vb">
+      <DependentUpon>frmIntro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIntro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmInstructions.resx">
+      <DependentUpon>frmInstructions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIntro.resx">
+      <DependentUpon>frmIntro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLose.resx">
+      <DependentUpon>frmLose.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPacMan.resx">
+      <DependentUpon>frmPacMan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyGoingtoDieBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyGoingtoDieWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyesDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyesLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyesRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyesUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhiteBoardV2Done copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_keys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyCyanDown copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyCyanLeft copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyCyanRight copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyCyanUp copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyOrangeDown copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyOrangeLeft copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyOrangeRight copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyOrangeUp copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadguyPinkDown copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyPinkLeft copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyPinkRight copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyPinkUp copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyRedDown copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyRedRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BadGuyRedUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BayGuyRedLeft copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Right2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Up2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Down 2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_beginning.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_death.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_eatfruit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_eatghost.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piepacman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\died.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cherries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keypac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strawberry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="385px-pac_mansvg-342x400.ICO" />
+    <None Include="Resources\pacman_chompreal.wav" />
+    <None Include="Resources\cooltext1390912431.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
